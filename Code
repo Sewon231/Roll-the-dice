@@ -1,0 +1,137 @@
+// Set the size of the canvas
+setSize(200, 200);
+// Set constant radius of the function
+const radius=20;
+// Roll and color is use in all functions
+let roll;
+let color;
+
+// the function make roll when mouse click
+function start() {
+    mouseClickMethod(rolldice);
+}
+
+// funtions rolls dice and decides color when dice is rolled
+function rolldice(e){
+    roll = Randomizer.nextInt(1,6);
+    removeAll();
+    color = Randomizer.nextColor();
+    if(roll == 1){
+        one();
+    }
+    else if(roll == 2){
+        two();
+    }
+     else if(roll == 3){
+        three();
+    }
+     else if(roll == 4){
+        four();
+    }
+     else if(roll == 5){
+        five();
+    }
+    else{
+        six();
+    }
+}
+
+// this function print image of one
+function one(){
+    let circle = new Circle(radius);
+	circle.setPosition(getWidth() / 2, getHeight() / 2);
+	circle.setColor(color);
+	add(circle);
+}
+   
+// this function print image of two
+
+function two(){
+    let circle1 = new Circle(radius);
+    circle1.setPosition(getWidth() / 4*3, getHeight() / 4*3);
+    circle1.setColor(color);
+    add(circle1);
+    let circle2 = new Circle(radius);
+	circle2.setPosition(getWidth() / 4, getHeight() / 4);
+	circle2.setColor(color);
+	add(circle2);
+}
+
+// this function print image of three
+
+function three(){
+    one();
+    two();
+}
+
+// this function print image of four
+
+function four(){
+    let circle1 = new Circle(radius);
+    circle1.setPosition(getWidth() / 4*3, getHeight() / 4*3);
+    circle1.setColor(color);
+    add(circle1);
+    let circle2 = new Circle(radius);
+    circle2.setPosition(getWidth() / 4, getHeight() / 4);
+    circle2.setColor(color);
+    add(circle2);
+    let circle3 = new Circle(radius);
+    circle3.setPosition(getWidth() / 4*3, getHeight() / 4);
+    circle3.setColor(color);
+    add(circle3);
+    let circle4 = new Circle(radius);
+	circle4.setPosition(getWidth() / 4, getHeight() / 4*3);
+	circle4.setColor(color);
+	add(circle4);
+}
+
+// this function print image of five
+
+function five(){
+    let circle1 = new Circle(radius);
+    circle1.setPosition(getWidth() / 4*3, getHeight() / 4*3);
+    circle1.setColor(color);
+    add(circle1);
+    let circle2 = new Circle(radius);
+    circle2.setPosition(getWidth() / 4, getHeight() / 4);
+    circle2.setColor(color);
+    add(circle2);
+    let circle3 = new Circle(radius);
+    circle3.setPosition(getWidth() / 4*3, getHeight() / 4);
+    circle3.setColor(color);
+    add(circle3);
+    let circle4 = new Circle(radius);
+    circle4.setPosition(getWidth() / 4, getHeight() / 4*3);
+	circle4.setColor(color);
+	add(circle4);
+	one();
+}
+
+// this function print image of six
+
+function six(){
+    let circle1 = new Circle(radius);
+    circle1.setPosition(getWidth() / 4*3, getHeight() / 4*3);
+    circle1.setColor(color);
+    add(circle1);
+    let circle2 = new Circle(radius);
+    circle2.setPosition(getWidth() / 4, getHeight() / 4);
+    circle2.setColor(color);
+    add(circle2);
+    let circle3 = new Circle(radius);
+    circle3.setPosition(getWidth() / 4*3, getHeight() / 4);
+    circle3.setColor(color);
+    add(circle3);
+    let circle4 = new Circle(radius);
+    circle4.setPosition(getWidth() / 4 , getHeight() / 4*3);
+    circle4.setColor(color);
+    add(circle4);
+    let circle5 = new Circle(radius);
+    circle5.setPosition(getWidth() / 4 , getHeight() / 4*2);
+    circle5.setColor(color);
+    add(circle5);
+    let circle6 = new Circle(radius);
+    circle6.setPosition(getWidth() / 4*3, getHeight() / 4*2);
+    circle6.setColor(color);
+    add(circle6);
+}
